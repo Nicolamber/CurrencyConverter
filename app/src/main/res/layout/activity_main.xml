@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="15dp"
-        android:hint="Cantidad"
+        android:hint="@string/amount_text"
         app:layout_constraintBottom_toBottomOf="@+id/from_currency_spinner"
         app:layout_constraintEnd_toStartOf="@+id/from_currency_spinner"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +87,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/from_currency_spinner"
-        tools:text="Convertir" />
+        tools:text="@string/convert_button_text" />
 
     <TextView
         android:id="@+id/conversion_result"
@@ -99,7 +99,7 @@
         app:layout_constraintEnd_toStartOf="@+id/convert_money_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/convert_money_button"
-        tools:text="1 dólar es igual a 10 euros" />
+        tools:text="1 USD = 10 EUR" />
 
     <ProgressBar
         android:id="@+id/currency_progress_bar"

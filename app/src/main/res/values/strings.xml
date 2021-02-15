@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Currency Converter</string>
+    <string name="converter_title">Conversor de Monedas</string>
+    <string name="from_text">De</string>
+    <string name="to_text">A</string>
+    <string name="amount_text">Cantidad</string>
+    <string name="convert_button_text">Convertir</string>
     <string-array name="currency_codes">
         <item>CAD</item>
         <item>EUR</item>

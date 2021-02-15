@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
+import com.example.currencyconverter.R
 import com.example.currencyconverter.databinding.ActivityMainBinding
 import com.example.currencyconverter.view.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -23,11 +24,11 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
+
+        initTexts()
 
         binding.convertMoneyButton. setOnClickListener {
-            viewModel.convert(
-                binding.moneyToConvert.text.toString(),
+            viewModel.convert(binding.moneyToConvert.text.toString(),
                 binding.fromCurrencySpinner.selectedItem.toString(),
                 binding.toCurrencySpinner.selectedItem.toString()
             )
@@ -56,5 +57,14 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    private fun initTexts() {
+        binding.converterTitle.text = getString(R.string.converter_title)
+        binding.fromMoney.text = getString(R.string.from_text)
+        binding.toMoney.text = getString(R.string.to_text)
+        binding.moneyToConvert.hint = getString(R.string.amount_text)
+        binding.convertMoneyButton.text = getString(R.string.convert_button_text)
+
     }
 }
